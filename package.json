@@ -9,6 +9,10 @@
   "scripts": {
     "start-react-app": "yarn workspace create-react-app start",
     "start-vite-react": "yarn workspace vite-react start",
-    "start-hydrogen": "yarn workspace hydrogen start"
+    "start-hydrogen": "yarn workspace hydrogen-app dev",
+    "start": "concurrently \"yarn start-react-app\" \"yarn start-vite-react\" \"yarn start-hydrogen\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
