@@ -1,0 +1,29 @@
+{
+  "name": "@test/ui",
+  "version": "1.0.0",
+  "main": "./dist/ui.umd.js",
+  "module": "./dist/ui.es.js",
+  "exports": {
+    "./style.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/ui.es.js",
+      "require": "./dist/ui.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "tailwindcss": "^3.0.8",
+    "twin.macro": "^2.8.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  }
+}

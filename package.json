@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "start-react-app": "yarn workspace create-react-app start",
+    "start-vite-react": "yarn workspace vite-react start",
+    "start-hydrogen": "yarn workspace hydrogen start"
+  }
+}
