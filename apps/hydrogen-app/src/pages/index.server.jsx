@@ -84,6 +84,8 @@ export default function Index({country = {isoCode: 'US'}}) {
   const featuredCollection =
     collections && collections.length > 1 ? collections[1] : collections[0];
 
+  console.log(TestButton.componentStyle.rules[0]({variant: 'primary'}))
+
   return (
     <Layout>
       <div className="relative mb-12">

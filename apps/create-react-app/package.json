@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.16.7",
     "@babel/runtime": "^7.16.5",
     "@test/ui": "1.0.0",
     "@testing-library/jest-dom": "^5.16.1",

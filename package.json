@@ -10,6 +10,7 @@
     "start-react-app": "yarn workspace create-react-app start",
     "start-vite-react": "yarn workspace vite-react start",
     "start-hydrogen": "yarn workspace hydrogen-app dev",
+    "start-rsc": "yarn workspace react-server-components-app start",
     "start": "concurrently \"yarn start-react-app\" \"yarn start-vite-react\" \"yarn start-hydrogen\""
   },
   "devDependencies": {
