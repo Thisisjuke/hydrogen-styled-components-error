@@ -7,11 +7,10 @@
  */
 
 import {createRoot} from 'react-dom';
-import Root from './Root.client';
+import App from './App.server';
 
-const initialCache = new Map();
 const root = createRoot(document.getElementById('root'));
-root.render(<Root initialCache={initialCache} />);
+root.render(<App />);
 
 // Note: in this example, the initial page is rendered on the client.
 // However, the intended solution (which isn't built out yet) is to
