@@ -1,4 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
+
+import {TestButton as TestButtonFromLib} from "@test/ui";
 
 const TestButton = styled.button`
   display: inline-block;
@@ -13,8 +16,11 @@ const TestButton = styled.button`
 
 export default function Button({children}) {
   return (
-    <TestButton>
-      {children}
-    </TestButton>
+      <>
+        <TestButtonFromLib>{children}</TestButtonFromLib>
+        <TestButton>
+          {children}
+        </TestButton>
+      </>
   );
 }
