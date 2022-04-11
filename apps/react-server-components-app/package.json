@@ -20,13 +20,13 @@
     "html-webpack-plugin": "5.5.0",
     "marked": "^1.2.5",
     "nodemon": "^2.0.6",
-    "react": "0.0.0-experimental-0cc724c77-20211125",
-    "react-dom": "0.0.0-experimental-0cc724c77-20211125",
+    "react": "0.0.0-experimental-2bf7c02f0-20220314",
+    "react-dom": "0.0.0-experimental-2bf7c02f0-20220314",
     "react-error-boundary": "^3.1.0",
-    "react-fetch": "0.0.0-experimental-0cc724c77-20211125",
-    "react-fs": "0.0.0-experimental-0cc724c77-20211125",
-    "react-pg": "0.0.0-experimental-0cc724c77-20211125",
-    "react-server-dom-webpack": "0.0.0-experimental-0cc724c77-20211125",
+    "react-fetch": "0.0.0-experimental-0568c0f8c-20220409",
+    "react-fs": "0.0.0-experimental-0568c0f8c-20220409",
+    "react-pg": "0.0.0-experimental-0568c0f8c-20220409",
+    "react-server-dom-webpack": "0.0.0-experimental-0568c0f8c-20220409",
     "resolve": "1.12.0",
     "rimraf": "^3.0.2",
     "sanitize-html": "^2.2.0",
@@ -40,13 +40,8 @@
   },
   "scripts": {
     "start": "concurrently \"npm run server:dev\" \"npm run bundler:dev\"",
-    "start:prod": "concurrently \"npm run server:prod\" \"npm run bundler:prod\"",
     "server:dev": "cross-env NODE_ENV=development nodemon -- --conditions=react-server server",
-    "server:prod": "cross-env NODE_ENV=production nodemon -- --conditions=react-server server",
-    "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js",
-    "bundler:prod": "cross-env NODE_ENV=production nodemon -- scripts/build.js",
-    "prettier": "prettier --write **/*.js",
-    "seed": "node ./scripts/seed.js"
+    "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js"
   },
   "babel": {
     "presets": [
