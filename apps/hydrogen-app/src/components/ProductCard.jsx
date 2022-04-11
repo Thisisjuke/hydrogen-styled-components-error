@@ -1,8 +1,12 @@
+import {Suspense} from 'react';
 import {Image, Link} from '@shopify/hydrogen';
 
 import MoneyCompareAtPrice from './MoneyCompareAtPrice.client';
 import MoneyPrice from './MoneyPrice.client';
 
+/**
+ * A shared component that displays a single product to allow buyers to quickly identify a particular item of interest
+ */
 export default function ProductCard({product}) {
   const selectedVariant = product.variants.edges[0].node;
 
@@ -17,7 +21,7 @@ export default function ProductCard({product}) {
           {selectedVariant.image ? (
             <Image
               className="bg-white absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover object-center object-contain hover:scale-110"
-              image={selectedVariant.image}
+              data={selectedVariant.image}
             />
           ) : null}
           {!selectedVariant?.availableForSale && (
@@ -37,9 +41,13 @@ export default function ProductCard({product}) {
 
         <div className="flex ">
           {selectedVariant.compareAtPriceV2 && (
-            <MoneyCompareAtPrice money={selectedVariant.compareAtPriceV2} />
+            <Suspense fallback={null}>
+              <MoneyCompareAtPrice money={selectedVariant.compareAtPriceV2} />
+            </Suspense>
           )}
-          <MoneyPrice money={selectedVariant.priceV2} />
+          <Suspense fallback={null}>
+            <MoneyPrice money={selectedVariant.priceV2} />
+          </Suspense>
         </div>
       </Link>
     </div>
