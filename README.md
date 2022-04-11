@@ -1,3 +1,5 @@
+> INFO : all packages have been updated to React 18 (and Hydrogen 0.14) to test further compatibility.
+
 # Goal :
 
 Reproduction of a bug where styled-components don't have any CSS in Hydrogen (Shopify).
